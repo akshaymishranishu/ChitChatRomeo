@@ -1,0 +1,11 @@
+{
+  "name": "chitchatromeo",
+  "version": "1.0.0",
+  "description": "chat app using socket io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akshay mishra",
+  "license": "ISC"
+}
