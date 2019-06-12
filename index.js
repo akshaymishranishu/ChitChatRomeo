@@ -11,9 +11,16 @@ var server = app.listen(4000, function(){
 //use static
 app.use(express.static('public'));
 
-//socket setuo
+//socket setup
 var io = socket(server);
 
 io.on('connection',function(socket){
     console.log('socket connection made', socket.id);
+
+    //Listen for chat event to be emitted by cilent (chat.js) and take the data
+    socket.on('chat', function(data){
+
+        //it emit the event to all the clients connected with this socket
+        io.emit('chat',data);
+    });
 });
